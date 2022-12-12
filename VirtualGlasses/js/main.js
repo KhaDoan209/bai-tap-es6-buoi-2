@@ -130,3 +130,15 @@ const showGlass = (array) => {
    getBy('#vglassesList').innerHTML = content;
 };
 showGlass(dataGlasses);
+
+removeGlasses = (bool) => {
+   if (getBy('#avatar').innerHTML == '') {
+      alert('Please choose the glass first');
+   } else {
+      if (bool) {
+         getBy('.vglasses__model img').style.opacity = '0.9';
+      } else {
+         getBy('.vglasses__model img').style.opacity = '0';
+      }
+   }
+};
